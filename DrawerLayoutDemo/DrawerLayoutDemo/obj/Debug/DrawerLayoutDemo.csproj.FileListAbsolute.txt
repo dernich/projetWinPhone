@@ -1,0 +1,75 @@
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\DrawerLayoutDemo.csprojResolveAssemblyReference.cache
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\App.g.i.cs
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\App.g.cs
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\MainPage.g.i.cs
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\MainPage.g.cs
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\XamlTypeInfo.g.cs
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\App.xaml
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\App.xbf
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\XamlSaveStateFile.xml
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\MainPage.xaml
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\MainPage.xbf
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\App.xbf
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\MainPage.xbf
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\DrawerLayoutDemo.xr.xml
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\DrawerLayoutDemo.exe
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\DrawerLayoutDemo.pdb
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\resources.pri
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\AppxManifest.xml
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\DrawerLayoutDemo.build.appxrecipe
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\DrawerLayout.dll
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\DrawerLayoutDemo.exe
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\DrawerLayoutDemo.pdb
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\DrawerLayoutDemo.csproj.GenerateResource.Cache
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\priconfig.xml
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\priconfig.xml.intermediate
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\layout.resfiles
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\layout.resfiles.intermediate
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\resources.resfiles
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\resources.resfiles.intermediate
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\pri.resfiles
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\pri.resfiles.intermediate
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\qualifiers.txt
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\qualifiers.txt.intermediate
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+c:\users\amar\documents\visual studio 2013\Projects\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\ProjectArchitectures.txt
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\App.xbf
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\MainPage.xbf
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\DrawerLayoutDemo.xr.xml
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\DrawerLayoutDemo.exe
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\DrawerLayoutDemo.pdb
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\resources.pri
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\AppxManifest.xml
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\DrawerLayoutDemo.build.appxrecipe
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\DrawerLayout.dll
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\DrawerLayoutDemo.csprojResolveAssemblyReference.cache
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\App.g.i.cs
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\App.g.cs
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\MainPage.g.i.cs
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\MainPage.g.cs
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\XamlTypeInfo.g.cs
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\App.xaml
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\MainPage.xaml
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\App.xbf
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\MainPage.xbf
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\XamlSaveStateFile.xml
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\DrawerLayoutDemo.exe
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\DrawerLayoutDemo.pdb
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\DrawerLayoutDemo.csproj.GenerateResource.Cache
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\priconfig.xml
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\priconfig.xml.intermediate
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\layout.resfiles
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\layout.resfiles.intermediate
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\resources.resfiles
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\resources.resfiles.intermediate
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\pri.resfiles
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\pri.resfiles.intermediate
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\qualifiers.txt
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\qualifiers.txt.intermediate
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\ProjectArchitectures.txt
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\bin\Debug\InformationPage.xbf
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\InformationPage.g.i.cs
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\InformationPage.g.cs
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\InformationPage.xaml
+C:\Users\Antoine\Desktop\DrawerLayoutDemo\DrawerLayoutDemo\obj\Debug\InformationPage.xbf
