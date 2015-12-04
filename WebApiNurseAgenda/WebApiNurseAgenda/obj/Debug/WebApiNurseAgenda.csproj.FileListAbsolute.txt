@@ -34,3 +34,4 @@ C:\Users\Antoine\Documents\IESN\3eme\CSharp\WebApiNurseAgenda\WebApiNurseAgenda\
 C:\Users\Antoine\Documents\IESN\3eme\CSharp\WebApiNurseAgenda\WebApiNurseAgenda\bin\fr\System.Web.Http.WebHost.resources.dll
 C:\Users\Antoine\Documents\IESN\3eme\CSharp\WebApiNurseAgenda\WebApiNurseAgenda\obj\Debug\WebApiNurseAgenda.dll
 C:\Users\Antoine\Documents\IESN\3eme\CSharp\WebApiNurseAgenda\WebApiNurseAgenda\obj\Debug\WebApiNurseAgenda.pdb
+C:\Users\Antoine\Documents\IESN\3eme\CSharp\WebApiNurseAgenda\WebApiNurseAgenda\obj\Debug\WebApiNurseAgenda.csprojResolveAssemblyReference.cache

@@ -17,9 +17,9 @@ namespace WebApiNurseAgenda.Controllers
         private nurseAgendaEntities db = new nurseAgendaEntities();
 
         // GET: api/infirmiers
-        public IQueryable<infirmier> Getinfirmiers()
+        public IEnumerable<infirmier> Getinfirmiers()
         {
-            return db.infirmiers;
+            return db.infirmiers.ToList();
         }
 
         // GET: api/infirmiers/5
