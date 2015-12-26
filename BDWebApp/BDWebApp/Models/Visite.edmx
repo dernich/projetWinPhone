@@ -1,0 +1,697 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DBIG3B9Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AccountBalance" Type="float" Nullable="false" />
+          <Property Name="AdresseLine1" Type="nvarchar(max)" />
+          <Property Name="AdresseLine2" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="Country" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Name" Type="nvarchar(max)" />
+          <Property Name="PostCode" Type="nvarchar(max)" />
+          <Property Name="Remark" Type="nvarchar(max)" />
+          <Property Name="RowVersion" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Emploi">
+          <Key>
+            <PropertyRef Name="codeEmploi" />
+          </Key>
+          <Property Name="codeEmploi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="soumisYN" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="dateEntree" Type="date" Nullable="false" />
+          <Property Name="dateSortie" Type="date" />
+          <Property Name="idTrav" Type="int" Nullable="false" />
+          <Property Name="numeroEntr" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Entreprise">
+          <Key>
+            <PropertyRef Name="numeroEntr" />
+          </Key>
+          <Property Name="numeroEntr" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="denomination" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="adresse" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="numTelephone" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ExamenRealise">
+          <Key>
+            <PropertyRef Name="codeExamReal" />
+          </Key>
+          <Property Name="codeExamReal" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="duree" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="resultat" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="prix" Type="numeric" Precision="4" Scale="2" Nullable="false" />
+          <Property Name="codeTypeExam" Type="int" Nullable="false" />
+          <Property Name="idVM" Type="int" Nullable="false" />
+          <Property Name="idMed" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="lieu">
+          <Key>
+            <PropertyRef Name="idLieu" />
+          </Key>
+          <Property Name="idLieu" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="libelle" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="typeLieu" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="supplement" Type="numeric" Precision="4" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Medecin">
+          <Key>
+            <PropertyRef Name="idMed" />
+          </Key>
+          <Property Name="idMed" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="prenom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="telephone" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="interne" Type="char" MaxLength="1" Nullable="false" />
+        </EntityType>
+        <EntityType Name="soumissionParticuliere">
+          <Key>
+            <PropertyRef Name="idSoumPart" />
+          </Key>
+          <Property Name="idSoumPart" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="codeTypeExam" Type="int" Nullable="false" />
+          <Property Name="codeEmploi" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Travailleur">
+          <Key>
+            <PropertyRef Name="idTrav" />
+          </Key>
+          <Property Name="idTrav" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="prenom" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="adresse" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="numDossier" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TypeExamen">
+          <Key>
+            <PropertyRef Name="codeTypeExam" />
+          </Key>
+          <Property Name="codeTypeExam" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="typeExamen" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="codeCompte" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="prixSoumis" Type="numeric" Precision="4" Scale="2" Nullable="false" />
+          <Property Name="prixNonSoumis" Type="numeric" Precision="4" Scale="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VisiteMedicale">
+          <Key>
+            <PropertyRef Name="idVM" />
+          </Key>
+          <Property Name="idVM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="dateVisite" Type="date" Nullable="false" />
+          <Property Name="codeEmploi" Type="int" Nullable="false" />
+          <Property Name="idLieu" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="REF_Emplo_Entre_FK">
+          <End Role="Entreprise" Type="Self.Entreprise" Multiplicity="1" />
+          <End Role="Emploi" Type="Self.Emploi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Entreprise">
+              <PropertyRef Name="numeroEntr" />
+            </Principal>
+            <Dependent Role="Emploi">
+              <PropertyRef Name="numeroEntr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Emplo_Trava_FK">
+          <End Role="Travailleur" Type="Self.Travailleur" Multiplicity="1" />
+          <End Role="Emploi" Type="Self.Emploi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Travailleur">
+              <PropertyRef Name="idTrav" />
+            </Principal>
+            <Dependent Role="Emploi">
+              <PropertyRef Name="idTrav" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Exame_Medec_FK">
+          <End Role="Medecin" Type="Self.Medecin" Multiplicity="1" />
+          <End Role="ExamenRealise" Type="Self.ExamenRealise" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medecin">
+              <PropertyRef Name="idMed" />
+            </Principal>
+            <Dependent Role="ExamenRealise">
+              <PropertyRef Name="idMed" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Exame_TypeE_FK">
+          <End Role="TypeExamen" Type="Self.TypeExamen" Multiplicity="1" />
+          <End Role="ExamenRealise" Type="Self.ExamenRealise" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeExamen">
+              <PropertyRef Name="codeTypeExam" />
+            </Principal>
+            <Dependent Role="ExamenRealise">
+              <PropertyRef Name="codeTypeExam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Exame_Visit_FK">
+          <End Role="VisiteMedicale" Type="Self.VisiteMedicale" Multiplicity="1" />
+          <End Role="ExamenRealise" Type="Self.ExamenRealise" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VisiteMedicale">
+              <PropertyRef Name="idVM" />
+            </Principal>
+            <Dependent Role="ExamenRealise">
+              <PropertyRef Name="idVM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_soumi_Emplo_FK">
+          <End Role="Emploi" Type="Self.Emploi" Multiplicity="1" />
+          <End Role="soumissionParticuliere" Type="Self.soumissionParticuliere" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Emploi">
+              <PropertyRef Name="codeEmploi" />
+            </Principal>
+            <Dependent Role="soumissionParticuliere">
+              <PropertyRef Name="codeEmploi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_soumi_TypeE_FK">
+          <End Role="TypeExamen" Type="Self.TypeExamen" Multiplicity="1" />
+          <End Role="soumissionParticuliere" Type="Self.soumissionParticuliere" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeExamen">
+              <PropertyRef Name="codeTypeExam" />
+            </Principal>
+            <Dependent Role="soumissionParticuliere">
+              <PropertyRef Name="codeTypeExam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Visit_Emplo_FK">
+          <End Role="Emploi" Type="Self.Emploi" Multiplicity="1" />
+          <End Role="VisiteMedicale" Type="Self.VisiteMedicale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Emploi">
+              <PropertyRef Name="codeEmploi" />
+            </Principal>
+            <Dependent Role="VisiteMedicale">
+              <PropertyRef Name="codeEmploi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Visit_lieu_FK">
+          <End Role="lieu" Type="Self.lieu" Multiplicity="1" />
+          <End Role="VisiteMedicale" Type="Self.VisiteMedicale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lieu">
+              <PropertyRef Name="idLieu" />
+            </Principal>
+            <Dependent Role="VisiteMedicale">
+              <PropertyRef Name="idLieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBIG3B9ModelStoreContainer">
+          <EntitySet Name="Customers" EntityType="Self.Customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Emploi" EntityType="Self.Emploi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Entreprise" EntityType="Self.Entreprise" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ExamenRealise" EntityType="Self.ExamenRealise" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="lieu" EntityType="Self.lieu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Medecin" EntityType="Self.Medecin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="soumissionParticuliere" EntityType="Self.soumissionParticuliere" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Travailleur" EntityType="Self.Travailleur" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TypeExamen" EntityType="Self.TypeExamen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="VisiteMedicale" EntityType="Self.VisiteMedicale" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="REF_Emplo_Entre_FK" Association="Self.REF_Emplo_Entre_FK">
+            <End Role="Entreprise" EntitySet="Entreprise" />
+            <End Role="Emploi" EntitySet="Emploi" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Emplo_Trava_FK" Association="Self.REF_Emplo_Trava_FK">
+            <End Role="Travailleur" EntitySet="Travailleur" />
+            <End Role="Emploi" EntitySet="Emploi" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Exame_Medec_FK" Association="Self.REF_Exame_Medec_FK">
+            <End Role="Medecin" EntitySet="Medecin" />
+            <End Role="ExamenRealise" EntitySet="ExamenRealise" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Exame_TypeE_FK" Association="Self.REF_Exame_TypeE_FK">
+            <End Role="TypeExamen" EntitySet="TypeExamen" />
+            <End Role="ExamenRealise" EntitySet="ExamenRealise" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Exame_Visit_FK" Association="Self.REF_Exame_Visit_FK">
+            <End Role="VisiteMedicale" EntitySet="VisiteMedicale" />
+            <End Role="ExamenRealise" EntitySet="ExamenRealise" />
+          </AssociationSet>
+          <AssociationSet Name="REF_soumi_Emplo_FK" Association="Self.REF_soumi_Emplo_FK">
+            <End Role="Emploi" EntitySet="Emploi" />
+            <End Role="soumissionParticuliere" EntitySet="soumissionParticuliere" />
+          </AssociationSet>
+          <AssociationSet Name="REF_soumi_TypeE_FK" Association="Self.REF_soumi_TypeE_FK">
+            <End Role="TypeExamen" EntitySet="TypeExamen" />
+            <End Role="soumissionParticuliere" EntitySet="soumissionParticuliere" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Visit_Emplo_FK" Association="Self.REF_Visit_Emplo_FK">
+            <End Role="Emploi" EntitySet="Emploi" />
+            <End Role="VisiteMedicale" EntitySet="VisiteMedicale" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Visit_lieu_FK" Association="Self.REF_Visit_lieu_FK">
+            <End Role="lieu" EntitySet="lieu" />
+            <End Role="VisiteMedicale" EntitySet="VisiteMedicale" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DBIG3B9Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Customers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AccountBalance" Type="Double" Nullable="false" />
+          <Property Name="AdresseLine1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AdresseLine2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PostCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Remark" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="RowVersion" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Emploi">
+          <Key>
+            <PropertyRef Name="codeEmploi" />
+          </Key>
+          <Property Name="codeEmploi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="soumisYN" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="dateEntree" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="dateSortie" Type="DateTime" Precision="0" />
+          <Property Name="idTrav" Type="Int32" Nullable="false" />
+          <Property Name="numeroEntr" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Entreprise" Relationship="Self.REF_Emplo_Entre_FK" FromRole="Emploi" ToRole="Entreprise" />
+          <NavigationProperty Name="Travailleur" Relationship="Self.REF_Emplo_Trava_FK" FromRole="Emploi" ToRole="Travailleur" />
+          <NavigationProperty Name="soumissionParticuliere" Relationship="Self.REF_soumi_Emplo_FK" FromRole="Emploi" ToRole="soumissionParticuliere" />
+          <NavigationProperty Name="VisiteMedicale" Relationship="Self.REF_Visit_Emplo_FK" FromRole="Emploi" ToRole="VisiteMedicale" />
+        </EntityType>
+        <EntityType Name="Entreprise">
+          <Key>
+            <PropertyRef Name="numeroEntr" />
+          </Key>
+          <Property Name="numeroEntr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="denomination" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="adresse" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="numTelephone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Emploi" Relationship="Self.REF_Emplo_Entre_FK" FromRole="Entreprise" ToRole="Emploi" />
+        </EntityType>
+        <EntityType Name="ExamenRealise">
+          <Key>
+            <PropertyRef Name="codeExamReal" />
+          </Key>
+          <Property Name="codeExamReal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="duree" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="resultat" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="prix" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+          <Property Name="codeTypeExam" Type="Int32" Nullable="false" />
+          <Property Name="idVM" Type="Int32" Nullable="false" />
+          <Property Name="idMed" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Medecin" Relationship="Self.REF_Exame_Medec_FK" FromRole="ExamenRealise" ToRole="Medecin" />
+          <NavigationProperty Name="TypeExamen" Relationship="Self.REF_Exame_TypeE_FK" FromRole="ExamenRealise" ToRole="TypeExamen" />
+          <NavigationProperty Name="VisiteMedicale" Relationship="Self.REF_Exame_Visit_FK" FromRole="ExamenRealise" ToRole="VisiteMedicale" />
+        </EntityType>
+        <EntityType Name="lieu">
+          <Key>
+            <PropertyRef Name="idLieu" />
+          </Key>
+          <Property Name="idLieu" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="libelle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="typeLieu" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="supplement" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+          <NavigationProperty Name="VisiteMedicale" Relationship="Self.REF_Visit_lieu_FK" FromRole="lieu" ToRole="VisiteMedicale" />
+        </EntityType>
+        <EntityType Name="Medecin">
+          <Key>
+            <PropertyRef Name="idMed" />
+          </Key>
+          <Property Name="idMed" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="telephone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="interne" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ExamenRealise" Relationship="Self.REF_Exame_Medec_FK" FromRole="Medecin" ToRole="ExamenRealise" />
+        </EntityType>
+        <EntityType Name="soumissionParticuliere">
+          <Key>
+            <PropertyRef Name="idSoumPart" />
+          </Key>
+          <Property Name="idSoumPart" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="codeTypeExam" Type="Int32" Nullable="false" />
+          <Property Name="codeEmploi" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Emploi" Relationship="Self.REF_soumi_Emplo_FK" FromRole="soumissionParticuliere" ToRole="Emploi" />
+          <NavigationProperty Name="TypeExamen" Relationship="Self.REF_soumi_TypeE_FK" FromRole="soumissionParticuliere" ToRole="TypeExamen" />
+        </EntityType>
+        <EntityType Name="Travailleur">
+          <Key>
+            <PropertyRef Name="idTrav" />
+          </Key>
+          <Property Name="idTrav" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="prenom" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="adresse" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="numDossier" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Emploi" Relationship="Self.REF_Emplo_Trava_FK" FromRole="Travailleur" ToRole="Emploi" />
+        </EntityType>
+        <EntityType Name="TypeExamen">
+          <Key>
+            <PropertyRef Name="codeTypeExam" />
+          </Key>
+          <Property Name="codeTypeExam" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="typeExamen1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="codeCompte" Type="Decimal" Precision="4" Scale="0" Nullable="false" />
+          <Property Name="prixSoumis" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+          <Property Name="prixNonSoumis" Type="Decimal" Precision="4" Scale="2" Nullable="false" />
+          <NavigationProperty Name="ExamenRealise" Relationship="Self.REF_Exame_TypeE_FK" FromRole="TypeExamen" ToRole="ExamenRealise" />
+          <NavigationProperty Name="soumissionParticuliere" Relationship="Self.REF_soumi_TypeE_FK" FromRole="TypeExamen" ToRole="soumissionParticuliere" />
+        </EntityType>
+        <EntityType Name="VisiteMedicale">
+          <Key>
+            <PropertyRef Name="idVM" />
+          </Key>
+          <Property Name="idVM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="dateVisite" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="codeEmploi" Type="Int32" Nullable="false" />
+          <Property Name="idLieu" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Emploi" Relationship="Self.REF_Visit_Emplo_FK" FromRole="VisiteMedicale" ToRole="Emploi" />
+          <NavigationProperty Name="ExamenRealise" Relationship="Self.REF_Exame_Visit_FK" FromRole="VisiteMedicale" ToRole="ExamenRealise" />
+          <NavigationProperty Name="lieu" Relationship="Self.REF_Visit_lieu_FK" FromRole="VisiteMedicale" ToRole="lieu" />
+        </EntityType>
+        <Association Name="REF_Emplo_Entre_FK">
+          <End Role="Entreprise" Type="Self.Entreprise" Multiplicity="1" />
+          <End Role="Emploi" Type="Self.Emploi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Entreprise">
+              <PropertyRef Name="numeroEntr" />
+            </Principal>
+            <Dependent Role="Emploi">
+              <PropertyRef Name="numeroEntr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Emplo_Trava_FK">
+          <End Role="Travailleur" Type="Self.Travailleur" Multiplicity="1" />
+          <End Role="Emploi" Type="Self.Emploi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Travailleur">
+              <PropertyRef Name="idTrav" />
+            </Principal>
+            <Dependent Role="Emploi">
+              <PropertyRef Name="idTrav" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_soumi_Emplo_FK">
+          <End Role="Emploi" Type="Self.Emploi" Multiplicity="1" />
+          <End Role="soumissionParticuliere" Type="Self.soumissionParticuliere" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Emploi">
+              <PropertyRef Name="codeEmploi" />
+            </Principal>
+            <Dependent Role="soumissionParticuliere">
+              <PropertyRef Name="codeEmploi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Visit_Emplo_FK">
+          <End Role="Emploi" Type="Self.Emploi" Multiplicity="1" />
+          <End Role="VisiteMedicale" Type="Self.VisiteMedicale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Emploi">
+              <PropertyRef Name="codeEmploi" />
+            </Principal>
+            <Dependent Role="VisiteMedicale">
+              <PropertyRef Name="codeEmploi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Exame_Medec_FK">
+          <End Role="Medecin" Type="Self.Medecin" Multiplicity="1" />
+          <End Role="ExamenRealise" Type="Self.ExamenRealise" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Medecin">
+              <PropertyRef Name="idMed" />
+            </Principal>
+            <Dependent Role="ExamenRealise">
+              <PropertyRef Name="idMed" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Exame_TypeE_FK">
+          <End Role="TypeExamen" Type="Self.TypeExamen" Multiplicity="1" />
+          <End Role="ExamenRealise" Type="Self.ExamenRealise" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeExamen">
+              <PropertyRef Name="codeTypeExam" />
+            </Principal>
+            <Dependent Role="ExamenRealise">
+              <PropertyRef Name="codeTypeExam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Exame_Visit_FK">
+          <End Role="VisiteMedicale" Type="Self.VisiteMedicale" Multiplicity="1" />
+          <End Role="ExamenRealise" Type="Self.ExamenRealise" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="VisiteMedicale">
+              <PropertyRef Name="idVM" />
+            </Principal>
+            <Dependent Role="ExamenRealise">
+              <PropertyRef Name="idVM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_Visit_lieu_FK">
+          <End Role="lieu" Type="Self.lieu" Multiplicity="1" />
+          <End Role="VisiteMedicale" Type="Self.VisiteMedicale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lieu">
+              <PropertyRef Name="idLieu" />
+            </Principal>
+            <Dependent Role="VisiteMedicale">
+              <PropertyRef Name="idLieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="REF_soumi_TypeE_FK">
+          <End Role="TypeExamen" Type="Self.TypeExamen" Multiplicity="1" />
+          <End Role="soumissionParticuliere" Type="Self.soumissionParticuliere" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TypeExamen">
+              <PropertyRef Name="codeTypeExam" />
+            </Principal>
+            <Dependent Role="soumissionParticuliere">
+              <PropertyRef Name="codeTypeExam" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DBIG3B9Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Customers" EntityType="Self.Customers" />
+          <EntitySet Name="Emploi" EntityType="Self.Emploi" />
+          <EntitySet Name="Entreprise" EntityType="Self.Entreprise" />
+          <EntitySet Name="ExamenRealise" EntityType="Self.ExamenRealise" />
+          <EntitySet Name="lieu" EntityType="Self.lieu" />
+          <EntitySet Name="Medecin" EntityType="Self.Medecin" />
+          <EntitySet Name="soumissionParticuliere" EntityType="Self.soumissionParticuliere" />
+          <EntitySet Name="Travailleur" EntityType="Self.Travailleur" />
+          <EntitySet Name="TypeExamen" EntityType="Self.TypeExamen" />
+          <EntitySet Name="VisiteMedicale" EntityType="Self.VisiteMedicale" />
+          <AssociationSet Name="REF_Emplo_Entre_FK" Association="Self.REF_Emplo_Entre_FK">
+            <End Role="Entreprise" EntitySet="Entreprise" />
+            <End Role="Emploi" EntitySet="Emploi" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Emplo_Trava_FK" Association="Self.REF_Emplo_Trava_FK">
+            <End Role="Travailleur" EntitySet="Travailleur" />
+            <End Role="Emploi" EntitySet="Emploi" />
+          </AssociationSet>
+          <AssociationSet Name="REF_soumi_Emplo_FK" Association="Self.REF_soumi_Emplo_FK">
+            <End Role="Emploi" EntitySet="Emploi" />
+            <End Role="soumissionParticuliere" EntitySet="soumissionParticuliere" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Visit_Emplo_FK" Association="Self.REF_Visit_Emplo_FK">
+            <End Role="Emploi" EntitySet="Emploi" />
+            <End Role="VisiteMedicale" EntitySet="VisiteMedicale" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Exame_Medec_FK" Association="Self.REF_Exame_Medec_FK">
+            <End Role="Medecin" EntitySet="Medecin" />
+            <End Role="ExamenRealise" EntitySet="ExamenRealise" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Exame_TypeE_FK" Association="Self.REF_Exame_TypeE_FK">
+            <End Role="TypeExamen" EntitySet="TypeExamen" />
+            <End Role="ExamenRealise" EntitySet="ExamenRealise" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Exame_Visit_FK" Association="Self.REF_Exame_Visit_FK">
+            <End Role="VisiteMedicale" EntitySet="VisiteMedicale" />
+            <End Role="ExamenRealise" EntitySet="ExamenRealise" />
+          </AssociationSet>
+          <AssociationSet Name="REF_Visit_lieu_FK" Association="Self.REF_Visit_lieu_FK">
+            <End Role="lieu" EntitySet="lieu" />
+            <End Role="VisiteMedicale" EntitySet="VisiteMedicale" />
+          </AssociationSet>
+          <AssociationSet Name="REF_soumi_TypeE_FK" Association="Self.REF_soumi_TypeE_FK">
+            <End Role="TypeExamen" EntitySet="TypeExamen" />
+            <End Role="soumissionParticuliere" EntitySet="soumissionParticuliere" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DBIG3B9ModelStoreContainer" CdmEntityContainer="DBIG3B9Entities">
+          <EntitySetMapping Name="Customers">
+            <EntityTypeMapping TypeName="DBIG3B9Model.Customers">
+              <MappingFragment StoreEntitySet="Customers">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="AccountBalance" ColumnName="AccountBalance" />
+                <ScalarProperty Name="AdresseLine1" ColumnName="AdresseLine1" />
+                <ScalarProperty Name="AdresseLine2" ColumnName="AdresseLine2" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Emploi">
+            <EntityTypeMapping TypeName="DBIG3B9Model.Emploi">
+              <MappingFragment StoreEntitySet="Emploi">
+                <ScalarProperty Name="codeEmploi" ColumnName="codeEmploi" />
+                <ScalarProperty Name="soumisYN" ColumnName="soumisYN" />
+                <ScalarProperty Name="dateEntree" ColumnName="dateEntree" />
+                <ScalarProperty Name="dateSortie" ColumnName="dateSortie" />
+                <ScalarProperty Name="idTrav" ColumnName="idTrav" />
+                <ScalarProperty Name="numeroEntr" ColumnName="numeroEntr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Entreprise">
+            <EntityTypeMapping TypeName="DBIG3B9Model.Entreprise">
+              <MappingFragment StoreEntitySet="Entreprise">
+                <ScalarProperty Name="numeroEntr" ColumnName="numeroEntr" />
+                <ScalarProperty Name="denomination" ColumnName="denomination" />
+                <ScalarProperty Name="adresse" ColumnName="adresse" />
+                <ScalarProperty Name="numTelephone" ColumnName="numTelephone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExamenRealise">
+            <EntityTypeMapping TypeName="DBIG3B9Model.ExamenRealise">
+              <MappingFragment StoreEntitySet="ExamenRealise">
+                <ScalarProperty Name="codeExamReal" ColumnName="codeExamReal" />
+                <ScalarProperty Name="duree" ColumnName="duree" />
+                <ScalarProperty Name="resultat" ColumnName="resultat" />
+                <ScalarProperty Name="prix" ColumnName="prix" />
+                <ScalarProperty Name="codeTypeExam" ColumnName="codeTypeExam" />
+                <ScalarProperty Name="idVM" ColumnName="idVM" />
+                <ScalarProperty Name="idMed" ColumnName="idMed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lieu">
+            <EntityTypeMapping TypeName="DBIG3B9Model.lieu">
+              <MappingFragment StoreEntitySet="lieu">
+                <ScalarProperty Name="idLieu" ColumnName="idLieu" />
+                <ScalarProperty Name="libelle" ColumnName="libelle" />
+                <ScalarProperty Name="typeLieu" ColumnName="typeLieu" />
+                <ScalarProperty Name="supplement" ColumnName="supplement" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Medecin">
+            <EntityTypeMapping TypeName="DBIG3B9Model.Medecin">
+              <MappingFragment StoreEntitySet="Medecin">
+                <ScalarProperty Name="idMed" ColumnName="idMed" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+                <ScalarProperty Name="prenom" ColumnName="prenom" />
+                <ScalarProperty Name="telephone" ColumnName="telephone" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="interne" ColumnName="interne" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="soumissionParticuliere">
+            <EntityTypeMapping TypeName="DBIG3B9Model.soumissionParticuliere">
+              <MappingFragment StoreEntitySet="soumissionParticuliere">
+                <ScalarProperty Name="idSoumPart" ColumnName="idSoumPart" />
+                <ScalarProperty Name="codeTypeExam" ColumnName="codeTypeExam" />
+                <ScalarProperty Name="codeEmploi" ColumnName="codeEmploi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Travailleur">
+            <EntityTypeMapping TypeName="DBIG3B9Model.Travailleur">
+              <MappingFragment StoreEntitySet="Travailleur">
+                <ScalarProperty Name="idTrav" ColumnName="idTrav" />
+                <ScalarProperty Name="nom" ColumnName="nom" />
+                <ScalarProperty Name="prenom" ColumnName="prenom" />
+                <ScalarProperty Name="adresse" ColumnName="adresse" />
+                <ScalarProperty Name="numDossier" ColumnName="numDossier" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TypeExamen">
+            <EntityTypeMapping TypeName="DBIG3B9Model.TypeExamen">
+              <MappingFragment StoreEntitySet="TypeExamen">
+                <ScalarProperty Name="codeTypeExam" ColumnName="codeTypeExam" />
+                <ScalarProperty Name="typeExamen1" ColumnName="typeExamen" />
+                <ScalarProperty Name="codeCompte" ColumnName="codeCompte" />
+                <ScalarProperty Name="prixSoumis" ColumnName="prixSoumis" />
+                <ScalarProperty Name="prixNonSoumis" ColumnName="prixNonSoumis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VisiteMedicale">
+            <EntityTypeMapping TypeName="DBIG3B9Model.VisiteMedicale">
+              <MappingFragment StoreEntitySet="VisiteMedicale">
+                <ScalarProperty Name="idVM" ColumnName="idVM" />
+                <ScalarProperty Name="dateVisite" ColumnName="dateVisite" />
+                <ScalarProperty Name="codeEmploi" ColumnName="codeEmploi" />
+                <ScalarProperty Name="idLieu" ColumnName="idLieu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

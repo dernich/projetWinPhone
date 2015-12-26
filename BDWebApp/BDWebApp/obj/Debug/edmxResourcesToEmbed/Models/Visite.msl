@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBIG3B9ModelStoreContainer" CdmEntityContainer="DBIG3B9Entities">
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="DBIG3B9Model.Customers">
+        <MappingFragment StoreEntitySet="Customers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountBalance" ColumnName="AccountBalance" />
+          <ScalarProperty Name="AdresseLine1" ColumnName="AdresseLine1" />
+          <ScalarProperty Name="AdresseLine2" ColumnName="AdresseLine2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Emploi">
+      <EntityTypeMapping TypeName="DBIG3B9Model.Emploi">
+        <MappingFragment StoreEntitySet="Emploi">
+          <ScalarProperty Name="codeEmploi" ColumnName="codeEmploi" />
+          <ScalarProperty Name="soumisYN" ColumnName="soumisYN" />
+          <ScalarProperty Name="dateEntree" ColumnName="dateEntree" />
+          <ScalarProperty Name="dateSortie" ColumnName="dateSortie" />
+          <ScalarProperty Name="idTrav" ColumnName="idTrav" />
+          <ScalarProperty Name="numeroEntr" ColumnName="numeroEntr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Entreprise">
+      <EntityTypeMapping TypeName="DBIG3B9Model.Entreprise">
+        <MappingFragment StoreEntitySet="Entreprise">
+          <ScalarProperty Name="numeroEntr" ColumnName="numeroEntr" />
+          <ScalarProperty Name="denomination" ColumnName="denomination" />
+          <ScalarProperty Name="adresse" ColumnName="adresse" />
+          <ScalarProperty Name="numTelephone" ColumnName="numTelephone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExamenRealise">
+      <EntityTypeMapping TypeName="DBIG3B9Model.ExamenRealise">
+        <MappingFragment StoreEntitySet="ExamenRealise">
+          <ScalarProperty Name="codeExamReal" ColumnName="codeExamReal" />
+          <ScalarProperty Name="duree" ColumnName="duree" />
+          <ScalarProperty Name="resultat" ColumnName="resultat" />
+          <ScalarProperty Name="prix" ColumnName="prix" />
+          <ScalarProperty Name="codeTypeExam" ColumnName="codeTypeExam" />
+          <ScalarProperty Name="idVM" ColumnName="idVM" />
+          <ScalarProperty Name="idMed" ColumnName="idMed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="lieu">
+      <EntityTypeMapping TypeName="DBIG3B9Model.lieu">
+        <MappingFragment StoreEntitySet="lieu">
+          <ScalarProperty Name="idLieu" ColumnName="idLieu" />
+          <ScalarProperty Name="libelle" ColumnName="libelle" />
+          <ScalarProperty Name="typeLieu" ColumnName="typeLieu" />
+          <ScalarProperty Name="supplement" ColumnName="supplement" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medecin">
+      <EntityTypeMapping TypeName="DBIG3B9Model.Medecin">
+        <MappingFragment StoreEntitySet="Medecin">
+          <ScalarProperty Name="idMed" ColumnName="idMed" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="prenom" ColumnName="prenom" />
+          <ScalarProperty Name="telephone" ColumnName="telephone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="interne" ColumnName="interne" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="soumissionParticuliere">
+      <EntityTypeMapping TypeName="DBIG3B9Model.soumissionParticuliere">
+        <MappingFragment StoreEntitySet="soumissionParticuliere">
+          <ScalarProperty Name="idSoumPart" ColumnName="idSoumPart" />
+          <ScalarProperty Name="codeTypeExam" ColumnName="codeTypeExam" />
+          <ScalarProperty Name="codeEmploi" ColumnName="codeEmploi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Travailleur">
+      <EntityTypeMapping TypeName="DBIG3B9Model.Travailleur">
+        <MappingFragment StoreEntitySet="Travailleur">
+          <ScalarProperty Name="idTrav" ColumnName="idTrav" />
+          <ScalarProperty Name="nom" ColumnName="nom" />
+          <ScalarProperty Name="prenom" ColumnName="prenom" />
+          <ScalarProperty Name="adresse" ColumnName="adresse" />
+          <ScalarProperty Name="numDossier" ColumnName="numDossier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TypeExamen">
+      <EntityTypeMapping TypeName="DBIG3B9Model.TypeExamen">
+        <MappingFragment StoreEntitySet="TypeExamen">
+          <ScalarProperty Name="codeTypeExam" ColumnName="codeTypeExam" />
+          <ScalarProperty Name="typeExamen1" ColumnName="typeExamen" />
+          <ScalarProperty Name="codeCompte" ColumnName="codeCompte" />
+          <ScalarProperty Name="prixSoumis" ColumnName="prixSoumis" />
+          <ScalarProperty Name="prixNonSoumis" ColumnName="prixNonSoumis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VisiteMedicale">
+      <EntityTypeMapping TypeName="DBIG3B9Model.VisiteMedicale">
+        <MappingFragment StoreEntitySet="VisiteMedicale">
+          <ScalarProperty Name="idVM" ColumnName="idVM" />
+          <ScalarProperty Name="dateVisite" ColumnName="dateVisite" />
+          <ScalarProperty Name="codeEmploi" ColumnName="codeEmploi" />
+          <ScalarProperty Name="idLieu" ColumnName="idLieu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
