@@ -1,0 +1,112 @@
+﻿<link href="Content/style.css" rel="stylesheet">
+<div>
+    <div style="text-align:center; padding-top:10px; padding-left: 40px; padding-right: 40px; padding-bottom:150px;">
+        <h1>Informations de la visite</h1>
+        <br/><br/>
+        <div>
+            <div style="float:left; width: 20%;">
+                <p>Travailleurs</p>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th><b>Id</b></th>
+                            <th><b>Nom</b></th>
+                            <th><b>Prenom</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="trav in travailleurs">
+                            <td>{{trav.idTrav}}</td>
+                            <td>{{trav.nom}}</td>
+                            <td>{{trav.prenom}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="float:right; width: 20%;">
+                <p>Entreprises</p>
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th><b>Id</b></th>
+                            <th><b>Nom</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="entrep in entreprises">
+                            <td>{{entrep.numeroEntr}}</td>
+                            <td>{{entrep.denomination}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <form>
+            <label for="emploi">Choisissez l'emploi : </label>
+            <select name="emploi" id="emploi" ng-model="visite.codeEmploi">
+                <option ng-repeat="em in emplois" value="{{em.codeEmploi}}">T : {{em.idTrav}} | E : {{em.numeroEntr}}</option>
+            </select>
+            <br /><br />
+            <label for="lieu">Choisissez le lieu de la visite : </label>
+            <select name="lieu" id="lieu" ng-model="visite.idLieu">
+                <option ng-repeat="lieu in lieux" value="{{lieu.idLieu}}">{{lieu.typeLieu}}</option>
+            </select>
+            <br /><br />
+            <label for="dateVisite">Date de la visite :</label>
+            <input type="date" id="dateVisite" name="dateVisite" ng-model="visite.dateVisite"
+                   placeholder="YYYY-MM-DD" required />
+            <br /><br />
+        </form>
+    </div>
+    <hr width="100%" />
+    <div style="margin-bottom:20px;">
+        <h1 style="text-align:center;">Encodage examens de la visite</h1>
+        <table id="tableExamen" class="table table-striped table-bordered table-hover">
+            <thead style="background-color:#5D9CEC; font-weight:bold; color:#FFFFFF;">
+                <tr>
+                    <th><b>Examen</b></th>
+                    <th><b>Prix</b></th>
+                    <th><b>Durée</b></th>
+                    <th><b>Résultat</b></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="rowContent in rows">
+                    <td>{{rowContent.typeExamenLib}}</td>
+                    <td>{{rowContent.prix}} €</td>
+                    <td>{{rowContent.duree}} min</td>
+                    <td>{{rowContent.resultat}}</td>
+                    <td><input type="button" value="Remove" ng-click="removeRow(rowContent)" class="btn btn-danger"/></td>
+                </tr>
+            </tbody>
+        </table>
+        <br />
+        <fieldset id="field">
+            <legend id="leg">Encodage</legend>
+            <form id="encodage" name="encodage">
+                <label for="selectExamen">Examen : </label>
+                <select id="selectExamen" name="selectExamen" ng-model="examen.codeTypeExam" required>
+                    <option ng-repeat="exam in typeExamens" value="{{exam.codeTypeExam}}">{{exam.typeExamen1}}</option>
+                </select>
+                <br /><br />
+                <label for="medecin">Medecin : </label>
+                <select id="medecin" name="medecin" ng-model="examen.idMed" required>
+                    <option ng-repeat="med in medecins" value="{{med.idMed}}">Dr {{med.nom}} {{med.prenom}}</option>
+                </select>
+                <br /><br />
+                <label for="resultatExamen">Résultat : </label>
+                <input type="text" id="resultatExamen" name="resultatExamen" ng-model="examen.resultat" required />
+                <br /><br />
+                <label for="duree">Durée : </label>
+                <input type="number" id="duree" value="0" name="duree" min="0" max="500" ng-model="examen.duree" required>
+                <br /><br />
+                <input type="submit" class="btn btn-default btn-sm" value="Ajouter" ng-click="encodage.$valid && addRow()">
+            </form>
+        </fieldset>
+        <br />
+        <div style="text-align:center;">
+            <input class="btn btn-success" type="submit" value="Confirmer" ng-click="Save()">
+        </div>
+    </div>
+</div>

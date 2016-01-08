@@ -1,0 +1,59 @@
+﻿<div style="text-align:center; padding:30px;">
+    <h1>Information visite</h1>
+    <div>
+        <div style="float:left; width: 20%;">
+            <p>Travailleurs</p>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th><b>Id</b></th>
+                        <th><b>Nom</b></th>
+                        <th><b>Prenom</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="trav in travailleurs">
+                        <td>{{trav.idTrav}}</td>
+                        <td>{{trav.nom}}</td>
+                        <td>{{trav.prenom}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="float:right; width: 20%;">
+            <p>Entreprises</p>
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th><b>Id</b></th>
+                        <th><b>Nom</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="entrep in entreprises">
+                        <td>{{entrep.numeroEntr}}</td>
+                        <td>{{entrep.denomination}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <form ng-controller="EntreprisesCtrl">
+        <label for="emploi">Choisissez l'emploi : </label>
+        <select name="emploi" id="emploi" ng-model="visite.codeEmploi">
+            <option ng-repeat="em in emplois" value="{{em.codeEmploi}}">T : {{em.idTrav}} | E : {{em.numeroEntr}}</option>
+        </select>
+        <br /><br/>
+        <label for="lieu">Choisissez le lieu de la visite : </label>
+        <select name="lieu" id="lieu" ng-model="visite.idLieu">
+            <option ng-repeat="lieu in lieux" value="{{lieu.idLieu}}">{{lieu.typeLieu}}</option>
+        </select>
+        <br /><br />
+        <label for="dateVisite">Date de la visite :</label>
+        <input type="date" id="dateVisite" name="dateVisite" ng-model="visite.dateVisite"
+               placeholder="yyyy-MM-dd" required />
+        <br /><br />
+        <a href="/#/Visite" class="btn btn-default">Suivant</a>
+        <p>{{visite.dateVisite | date:"yyyy-MM-dd"}}</p>
+    </form>
+</div>
