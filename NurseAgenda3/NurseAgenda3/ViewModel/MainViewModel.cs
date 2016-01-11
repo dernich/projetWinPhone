@@ -19,7 +19,6 @@ namespace NurseAgenda3.ViewModel
 
         public MainViewModel()
         {
-            //Patients = new ObservableCollection<Patient>(AllPatients.GetAllPatients());
             myDataAccess = new MyDataAccess();
         }
 
@@ -62,7 +61,6 @@ namespace NurseAgenda3.ViewModel
         {
             List<Patient> listPatient = await myDataAccess.getAllPatient();
             
-            //_patients.Clear();
             foreach (var item in listPatient)
             {
                 _patients.Add(item);
@@ -72,7 +70,6 @@ namespace NurseAgenda3.ViewModel
         public void OnNavigateTo(Patient clickedItem)
         {
             _navigationService.NavigateTo("InformationPage", clickedItem);
-            //LoadPatients();
         }
 
         public void OnNavigateToDelete()

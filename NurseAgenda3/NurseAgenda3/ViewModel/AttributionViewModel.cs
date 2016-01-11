@@ -19,7 +19,6 @@ namespace NurseAgenda3.ViewModel
 
         public AttributionViewModel()
         {
-            //Patients = new ObservableCollection<Patient>(AllPatients.GetAllPatients());
             myDataAccess = new MyDataAccess();
             LoadPatients();
             LoadNurses();
@@ -56,8 +55,7 @@ namespace NurseAgenda3.ViewModel
         private async void LoadPatients()
         {
             List<Patient> listPatient = await myDataAccess.getAllPatient();
-
-            //_patients.Clear();
+            
             foreach (var item in listPatient)
             {
                 _patients.Add(item);
@@ -107,8 +105,7 @@ namespace NurseAgenda3.ViewModel
         private async void LoadNurses()
         {
             List<Infirmier> listNurse = await myDataAccess.getAllNurse();
-
-            //_patients.Clear();
+            
             foreach (var item in listNurse)
             {
                 _nurses.Add(item);
@@ -123,7 +120,7 @@ namespace NurseAgenda3.ViewModel
             soin.IdInfi = NurseSelected.IdInfirmier;
             soin.IdPatient = PatientSelected.IdPatient;
             myDataAccess.AddCare(soin);
-            //new MessageDialog("Patient selectionné : " + PatientSelected.Prenom + "\nNurse selectionné : " + NurseSelected.Prenom).ShowAsync();
+            new MessageDialog("Ajout confirmé").ShowAsync();
         }
     }
 }

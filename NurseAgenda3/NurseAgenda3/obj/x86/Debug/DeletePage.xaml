@@ -12,30 +12,30 @@
         <SplitView.Pane>
             <StackPanel Background="#339933">
                 <StackPanel Orientation="Horizontal" Background="White">
-                    <Button x:ConnectionId='8' x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Width="50" Height="50" Background="Transparent"                               Foreground="#339933"/>
+                    <Button x:ConnectionId='9' x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;" Width="50" Height="50" Background="Transparent"                               Foreground="#339933"/>
                     <TextBlock x:Uid="Menu" Text="" FontSize="18" VerticalAlignment="Center" Foreground="#339933"/>
                 </StackPanel>
                 <Button x:ConnectionId='2' Background="#339933" Height="50"                                 >
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:ConnectionId='7' x:Name="FeuilleRouteButton" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Text="&#xEBE6;" Margin="8,0,0,0" Foreground="White" Width="32"/>
+                        <TextBlock x:ConnectionId='8' x:Name="FeuilleRouteButton" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Text="&#xEBE6;" Margin="8,0,0,0" Foreground="White" Width="32"/>
                         <TextBlock x:Uid="Roadmap" Text="" FontSize="18" VerticalAlignment="Center" Foreground="White"/>
                     </StackPanel>
                 </Button>
                 <Button Background="#339933" Height="50">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:ConnectionId='6' x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Text="&#xE107;" Margin="8,0,0,0" Foreground="White" Width="32"/>
+                        <TextBlock x:ConnectionId='7' x:Name="MenuButton2" FontFamily="Segoe MDL2 Assets" VerticalAlignment="Center" Text="&#xE107;" Margin="8,0,0,0" Foreground="White" Width="32"/>
                         <TextBlock x:Uid="Delete" Text="" FontSize="18" VerticalAlignment="Center" Foreground="White"/>
                     </StackPanel>
                 </Button>
                 <Button x:ConnectionId='3' Background="#339933" Height="50"                                >
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:ConnectionId='5' x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Text="&#xE710;" Margin="8,0,0,0" Foreground="White" Width="32"/>
+                        <TextBlock x:ConnectionId='6' x:Name="MenuButton3" FontFamily="Segoe MDL2 Assets" Text="&#xE710;" Margin="8,0,0,0" Foreground="White" Width="32"/>
                         <TextBlock x:Uid="Attribution" Text="" FontSize="18" VerticalAlignment="Center" Foreground="White"/>
                     </StackPanel>
                 </Button>
-                <Button Background="#339933" Height="50">
+                <Button x:ConnectionId='4' Background="#339933" Height="50"                           >
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock x:ConnectionId='4' x:Name="MenuButton4" FontFamily="Segoe MDL2 Assets" Text="&#xE7E8;" Margin="8,0,0,0" Foreground="White" Width="32"/>
+                        <TextBlock x:ConnectionId='5' x:Name="MenuButton4" FontFamily="Segoe MDL2 Assets" Text="&#xE7E8;" Margin="8,0,0,0" Foreground="White" Width="32"/>
                         <TextBlock x:Uid="LogOut" Text="" FontSize="18" VerticalAlignment="Center" Foreground="White"/>
                     </StackPanel>
                 </Button>
@@ -47,11 +47,11 @@
                     <RowDefinition  Height="Auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Grid x:ConnectionId='9' x:Name="TitleBar" Grid.Row="0" Background="#339933" Height="50" VerticalAlignment="Top">
+                <Grid x:ConnectionId='10' x:Name="TitleBar" Grid.Row="0" Background="#339933" Height="50" VerticalAlignment="Top">
                     <TextBlock Grid.Column="1" x:Uid="Delete" Text="" Foreground="White" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 </Grid>
-                <Grid x:ConnectionId='10' x:Name="ListPatient" Grid.Row="1">
-                    <ListView x:ConnectionId='11' x:Name="ListPatientItems" ItemsSource="{Binding Patients, Mode=TwoWay}"                                        IsItemClickEnabled="True" Background="White">
+                <Grid x:ConnectionId='11' x:Name="ListPatient" Grid.Row="1">
+                    <ListView x:ConnectionId='12' x:Name="ListPatientItems" ItemsSource="{Binding Patients, Mode=TwoWay}"                                        IsItemClickEnabled="True" Background="White">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding Nom}" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18" Foreground="Black" />

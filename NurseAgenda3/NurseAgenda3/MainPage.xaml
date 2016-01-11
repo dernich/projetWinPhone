@@ -33,7 +33,7 @@
                         <TextBlock x:Uid="Attribution" Text="" FontSize="18" VerticalAlignment="Center" Foreground="White"/>
                     </StackPanel>
                 </Button>
-                <Button Background="#339933" Height="50">
+                <Button Background="#339933" Height="50" Click="LogOutButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock x:Name="MenuButton4" FontFamily="Segoe MDL2 Assets" Text="&#xE7E8;" Margin="8,0,0,0" Foreground="White" Width="32"/>
                         <TextBlock x:Uid="LogOut" Text="" FontSize="18" VerticalAlignment="Center" Foreground="White"/>

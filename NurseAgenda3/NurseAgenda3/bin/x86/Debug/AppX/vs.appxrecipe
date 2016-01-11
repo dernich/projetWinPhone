@@ -22,7 +22,7 @@
     <AppXManifest Include="C:\Users\Antoine\Documents\IESN\3eme\CSharp\NurseAgenda3\NurseAgenda3\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-08T10:40:38.062</Modified>
+      <Modified>2016-01-11T18:39:26.156</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -33,7 +33,7 @@
     <AppxPackagedFile Include="C:\Users\Antoine\Documents\IESN\3eme\CSharp\NurseAgenda3\NurseAgenda3\bin\x86\Debug\Core\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-05T19:31:22.522</Modified>
+      <Modified>2016-01-11T18:34:30.127</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Documents\IESN\3eme\CSharp\NurseAgenda3\NurseAgenda3\bin\x86\Debug\Core\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
@@ -71,7 +71,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Documents\IESN\3eme\CSharp\NurseAgenda3\NurseAgenda3\bin\x86\Debug\Core\entrypoint\NurseAgenda3.exe">
       <PackagePath>entrypoint\NurseAgenda3.exe</PackagePath>
-      <Modified>2016-01-08T10:40:35.591</Modified>
+      <Modified>2016-01-11T18:39:22.390</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Documents\IESN\3eme\CSharp\NurseAgenda3\NurseAgenda3\bin\x86\Debug\Core\GalaSoft.MvvmLight.dll">
       <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
@@ -107,7 +107,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Documents\IESN\3eme\CSharp\NurseAgenda3\NurseAgenda3\bin\x86\Debug\Core\NurseAgenda3.exe">
       <PackagePath>NurseAgenda3.exe</PackagePath>
-      <Modified>2016-01-08T10:40:38.049</Modified>
+      <Modified>2016-01-11T18:39:26.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Documents\IESN\3eme\CSharp\NurseAgenda3\NurseAgenda3\bin\x86\Debug\Core\NurseAgenda3.xr.xml">
       <PackagePath>NurseAgenda3.xr.xml</PackagePath>
@@ -119,7 +119,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Documents\IESN\3eme\CSharp\NurseAgenda3\NurseAgenda3\bin\x86\Debug\Core\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-01-08T10:40:36.972</Modified>
+      <Modified>2016-01-11T18:39:24.234</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Antoine\Documents\IESN\3eme\CSharp\NurseAgenda3\NurseAgenda3\bin\x86\Debug\Core\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>

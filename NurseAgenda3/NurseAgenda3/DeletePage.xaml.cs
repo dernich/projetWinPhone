@@ -48,5 +48,10 @@ namespace NurseAgenda3
         {
             Frame.Navigate(typeof(AttributionPage));
         }
+
+        private void LogOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(LoginPage));
+        }
     }
 }

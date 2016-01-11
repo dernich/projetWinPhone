@@ -19,7 +19,6 @@ namespace NurseAgenda3.ViewModel
 
         public DeleteViewModel()
         {
-            //Patients = new ObservableCollection<Patient>(AllPatients.GetAllPatients());
             myDataAccess = new MyDataAccess();
         }
 
@@ -61,8 +60,7 @@ namespace NurseAgenda3.ViewModel
         private async void LoadPatients()
         {
             List<Patient> listPatient = await myDataAccess.getAllPatient();
-
-            //_patients.Clear();
+            
             foreach (var item in listPatient)
             {
                 _patients.Add(item);

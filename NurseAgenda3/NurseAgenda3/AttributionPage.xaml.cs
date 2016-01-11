@@ -47,5 +47,10 @@ namespace NurseAgenda3
         {
             ((AttributionViewModel)DataContext).AddCare();
         }
+
+        private void LogOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(LoginPage));
+        }
     }
 }

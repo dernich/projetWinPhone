@@ -46,27 +46,31 @@ namespace NurseAgenda3.ViewModel
             }
         }
 
+        private String login;
+
         public String Login
         {
-            get { return Login; }
+            get { return login; }
             set
             {
-                Login = value;
+                login = value;
                 RaisePropertyChanged("Login");
             }
         }
 
+        private String password;
+
         public String Password
         {
-            get { return Password; }
+            get { return password; }
             set
             {
-                Password = value;
+                password = value;
                 RaisePropertyChanged("Password");
             }
         }
 
-        public void Connection()
+        public Boolean Connection()
         {
             foreach (var nurse in _nurses)
             {
@@ -74,20 +78,20 @@ namespace NurseAgenda3.ViewModel
                 {
                     if(nurse.MotDePasse == Password)
                     {
-                        //return true;
+                        return true;
                         new MessageDialog(nurse.Nom).ShowAsync();
                     }
                     else
                     {
-                        //return false;
+                        return false;
                     }
                 }
                 else
                 {
-                    //return false;
+                    return false;
                 }
             }
-            //return false;
+            return false;
         }
     }
 }

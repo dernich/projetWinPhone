@@ -27,19 +27,20 @@ namespace NurseAgenda3
         public LoginPage()
         {
             this.InitializeComponent();
+            this.DataContext = new LoginViewModel();
         }
 
         private void ConnectionButton_Click(object sender, RoutedEventArgs e)
         {
-            Boolean connected = true;
-            //((LoginViewModel)DataContext).Connection();
+            Boolean connected;
+            connected = ((LoginViewModel)DataContext).Connection();
             if (connected)
             {
                 Frame.Navigate(typeof(MainPage));
             }
             else
             {
-                //new MessageDialog("Wrong login or password").ShowAsync();
+                new MessageDialog("Wrong login or password").ShowAsync();
             }
         }
     }
